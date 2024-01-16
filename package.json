@@ -9,7 +9,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jessbodie/personal-website-v2.git"
+    "url": "git+https://github.com/jessbodie/jbr-personal-website-v3"
   },
   "scripts": {
     "compile:sass": "node-sass public/sass/main.scss public/css/style.css",
@@ -45,7 +45,6 @@
     "handlebars": "^4.7.8",
     "handlebars-loader": "^1.7.3",
     "handlebars-template-loader": "^1.0.0",
-    "new": "file:webpack",
     "node-sass": "^9.0.0",
     "nodemon": "^3.0.2",
     "npm-run-all": "^4.1.2",
