@@ -46,8 +46,8 @@
       // Needed to show when Clip Path and Shape Outside supported
       @supports ((clip-path: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))
                 and (shape-outside: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))) {
-          margin-left: 0;
-          margin-right: $left-margin; // NEW
+          margin-left: -10rem;
+          // margin-right: $left-margin; // NEW
         }
     }
   }
@@ -78,12 +78,13 @@
 
 
     p {
-      font-size: 2.2rem;
+      font-size: 1.4em;
       line-height: 155%;
 
       @include respond(tab-port) {
-        font-size: 1.8rem;
+        font-size: 1.4em;
         line-height: 160%;
+        margin-left: 1em;
         }
       }
     }

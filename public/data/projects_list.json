@@ -1,12 +1,12 @@
 [
     {
-        "id": 0,
-        "title": "Developer and Product Manager (2018)",
-        "link": "http://basketball.jessbodie.com",
-        "label": "JS, SASS",
-        "screenshot": "img/projects/proj_basketball_scorekeeping.png",
-        "alt": "Screenshot of Basketball Scorekeeping",
-        "description": "<p>Designed and developed the <b><a href='http://basketball.jessbodie.com' target='_blank'>Basketball Scorekeeping</a></b> web app with JavaScript and HTML/SASS. This app is intended to replace a tedious paper-and-pencil process used to score youth basketball games.</p>"
+        "id": -1,
+        "title": "Administrator, Financial Consolidation Systems (2020-present)",
+        "link": "https://www.interpublic.com",
+        "label": "JS, CSS",
+        "screenshot": "img/projects/proj_ipg.png",
+        "alt": "InterPublic Group",
+        "description": "<ul>  <li>Developed  internal tools with GUIs to automate repetitive processes, save time, and minimize errors.  These tools ingest user inputs and CSV data to output software configuration strings, Data Copy files, user-friendly text, or algorithmically selected data sets.</li>  </ul>"
     },
     {
         "id": 1,
@@ -17,6 +17,16 @@
         "alt": "Screenshot of Lucky Cat - Game",
         "description": "<p>Designed and developed the <b><a href='http://lucky.jessbodie.com' target='_blank'>Lucky Cat - Game</a></b> web app with JavaScript, SASS, and HTML. Click Lucky Cat to grow your pot of gold.</p>"
         },
+
+    {
+        "id": 0,
+        "title": "Developer and Product Manager (2018)",
+        "link": "http://basketball.jessbodie.com",
+        "label": "JS, SASS",
+        "screenshot": "img/projects/proj_basketball_scorekeeping.png",
+        "alt": "Screenshot of Basketball Scorekeeping",
+        "description": "<p>Designed and developed the <b><a href='http://basketball.jessbodie.com' target='_blank'>Basketball Scorekeeping</a></b> web app with JavaScript and HTML/SASS. This app is intended to replace a tedious paper-and-pencil process used to score youth basketball games.</p>"
+    },
         {
             "id": 2,
             "title": "Developer (2018)",
@@ -24,7 +34,7 @@
             "label": "JS, ES6, SASS",
             "screenshot": "img/projects/proj_tictactoe.png",
             "alt": "Screenshot of Tic Tac Toe",
-            "description": "<p>Developed Developed the classic <b><a href='https://tictacboh.herokuapp.com/' target='_blank'>Tic Tac Toe</a></b> game with JavaScript, ES6, SASS, HTML, Node.js, Webpack.</p>"
+            "description": "<p>Developed Developed the classic <b><a href='https://www.panix.com/~ianr/tictacboh/' target='_blank'>Tic Tac Toe</a></b> game with JavaScript, ES6, SASS, HTML, Node.js, Webpack.</p>"
             },
     {
         "id": 3,
@@ -107,5 +117,5 @@
         "alt": "Screenshot of NYEE.edu",
         "description": "<ul>  <li>Lead stakeholder, design, and engineering teams to redesign the hospital website (<b><a href='http://www.nyee.edu' target='_blank'>nyee.edu</a></b>) into template-based, responsive, CMS-driven site.</li>  <li>Prepared business requirements, functional requirements, information architecture documents and wireframes.</li>  </ul>"
         }
-]
+    ]
 
