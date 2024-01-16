@@ -21,7 +21,7 @@
     "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
     "start:dev": "npm-run-all -p watch:sass watch",
     "start:node": "node index.js",
-    "start": "npm-run-all -p build:css start:node",
+    "start": "npm-run-all build:css start:node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jess Bodie Richards",
