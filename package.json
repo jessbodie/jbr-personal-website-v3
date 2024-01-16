@@ -1,7 +1,11 @@
 {
-  "name": "new",
+  "name": "jbr-website",
   "version": "3.0.0",
   "description": "Jess Bodie Richards - Personal Website v 3.0",
+  "engines": {
+    "node": "14.0.0",
+    "npm": "6.14.4"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -17,9 +21,7 @@
     "start:dev": "npm-run-all -p watch:sass watch",
     "start:node": "node index.js",
     "start": "npm-run-all -p build:css start:node",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "dev": "webpack serve"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jess Bodie Richards",
   "license": "ISC",
@@ -27,9 +29,7 @@
   "dependencies": {
     "aos": "^2.2.0",
     "express": "^4.18.2",
-    "hbs": "^4.0.1",
-    "html-webpack-plugin": "^5.5.3",
-    "style-loader": "^3.3.4"
+    "hbs": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
@@ -43,17 +43,11 @@
     "handlebars": "^4.7.8",
     "handlebars-loader": "^1.7.3",
     "handlebars-template-loader": "^1.0.0",
-    "handlebars-webpack-plugin": "^2.2.1",
-    "html-bundler-webpack-plugin": "^2.14.3",
     "node-sass": "^9.0.0",
     "nodemon": "^1.17.3",
     "npm-run-all": "^4.1.2",
     "postcss-cli": "^5.0.0",
     "sass": "^1.69.1",
-    "sass-loader": "^13.3.2",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1",
-    "webpack-node-externals": "^3.0.0"
+    "sass-loader": "^13.3.2"
   }
 }
