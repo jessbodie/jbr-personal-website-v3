@@ -145,7 +145,7 @@ var controller = (function(dataCtrl, UICtrl){
                intervalID = window.setInterval(function() {
                     // Increment each second
                     timeIdle++;
-                    console.log(timeIdle);
+                    // console.log(timeIdle);
 
                     // Check if every 5th second
                     if ((timeIdle % 5) == 0) {
@@ -179,7 +179,7 @@ var controller = (function(dataCtrl, UICtrl){
           UICtrl.isPaused = true;
           UICtrl.clearCaption();
           window.clearInterval(intervalID);
-          console.log("paused");
+          // console.log("paused");
 
           // Pause timer
           changeCaptionOnTimer(dataCtrl.getData().length, true);
@@ -254,7 +254,7 @@ var controller = (function(dataCtrl, UICtrl){
 
      return {
           init: function() {
-               console.log("app started");
+               // console.log("app started");
                setupEventListeners();
           }
      };
