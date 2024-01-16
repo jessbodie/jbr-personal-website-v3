@@ -13,9 +13,10 @@
   },
   "scripts": {
     "compile:sass": "node-sass public/sass/main.scss public/css/style.css",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" public/css/style.css -o public/css/style.prefix.css",
+    "prefix:css": "postcss public/css/style.css -o public/css/style.prefix.css",
     "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "build:css": "npm-run-all compile:sass compress:css",
+    "_alternate_build:css": "npm-run-all compile:sass prefix:css compress:css",
     "watch": "nodemon -e js,hbs",
     "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
     "start:dev": "npm-run-all -p watch:sass watch",
