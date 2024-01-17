@@ -32,6 +32,7 @@
     "express": "^4.18.2",
     "hbs": "^4.0.1",
     "npm-run-all": "^4.1.5",
+    "node-sass": "^9.0.0",
     "html-webpack-plugin": "^5.6.0"
   },
   "devDependencies": {
@@ -46,7 +47,6 @@
     "handlebars": "^4.7.8",
     "handlebars-loader": "^1.7.3",
     "handlebars-template-loader": "^1.0.0",
-    "node-sass": "^9.0.0",
     "nodemon": "^3.0.2",
     "postcss": "^8.4.33",
     "postcss-cli": "^11.0.0",
