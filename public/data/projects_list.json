@@ -4,7 +4,7 @@
         "title": "Administrator, Financial Consolidation Systems (2020-present)",
         "link": "https://www.interpublic.com",
         "label": "JS, CSS",
-        "screenshot": "img/projects/proj_ipg.png",
+        "screenshot": "img/projects/proj_IPG.png",
         "alt": "InterPublic Group",
         "description": "<ul>  <li>Developed  internal tools with GUIs to automate repetitive processes, save time, and minimize errors.  These tools ingest user inputs and CSV data to output software configuration strings, Data Copy files, user-friendly text, or algorithmically selected data sets.</li>  </ul>"
     },
