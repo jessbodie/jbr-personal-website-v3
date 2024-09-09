@@ -31,9 +31,15 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/connect', (req, res) => {
-    res.render('connect.hbs', {
-        pageTitle: 'Connect'
+app.get('/about', (req, res) => {
+    res.render('about.hbs', {
+        pageTitle: 'About'
+    });
+});
+
+app.get('/blog', (req, res) => {
+    res.render('blog.hbs', {
+        pageTitle: 'Blog'
     });
 });
 
