@@ -16,6 +16,15 @@
     @include basic-flex;
   }
 
+  &__listing {
+    display: flex;
+    align-items: flex-start;
+
+    &-blurb{
+      margin-left: 2rem;
+    }
+  }
+
   &__image {
     display: inline-block;
     line-height: 0;
@@ -39,6 +48,12 @@
         margin-bottom: 0;
         }
   
+    }
+
+    &-thumb {
+      width: 200px;
+      max-height: 20rem;
+      overflow: hidden;
     }
 
     &-crazy {
@@ -102,8 +117,13 @@
 
     }
 
+    &-label {
+              margin-left: 0
+            }
 
-
+    &-date {
+      color: $color-primary;
+    }
 
     &-single {
       // border: 1px solid gray;
@@ -136,19 +156,24 @@
 
       }
 
-      &-date {
-        margin-bottom: 0.25rem;
-      }
-
       li {
         margin-left: 0.5rem;
         
       }
 
-      }
+    }
 
-
-
+    &-multi {
+      color: $color-primary-dark;
+      font-size: $body-default;
+      line-height: 160%;
+      word-spacing: .35rem;
+      margin-bottom: 2.5rem;
+      padding-right: 10vw;
+      position: relative;
+      top: 0;
+      vertical-align: top;  
+    }
 
   }
 }
