@@ -656,8 +656,7 @@ img {
           margin-bottom: 0; } }
     .obligatory__image-thumb {
       width: 200px;
-      max-height: 20rem;
-      overflow: hidden; }
+      margin: 1rem 0; }
     .obligatory__image-crazy {
       filter: blur(1px) hue-rotate(90deg) saturate(150%);
       transition: all 500ms; }
