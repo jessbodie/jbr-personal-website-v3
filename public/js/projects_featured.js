@@ -114,7 +114,7 @@ var UIController = (function() {
       for (var i = 0; i < p.length; i++) {
         var newProjDiv = document.createElement("div");
         document.getElementById("list").appendChild(newProjDiv);
-        newProjDiv.outerHTML = "<div class='list__container'><input id='toggle" + i +"' type='checkbox' unchecked>  <label for='toggle" + i +"'>  <div class='list__container-image' data-aos='fade-up' data-aos-once='true'> <div class='list__container-header'> <div class='list__container-header-rotate'> <h2 class='heading-secondary'>" + p[i].label + "</h2> </div> </div> <img src='" + p[i].screenshot + "' alt='" + p[i].alt + "'> </div> </label> <div id='expand'> <div class='list__container-text' id='proj-text-" + i + "'> <h3 class='heading-tertiary'>" + p[i].title + "</h3>" + p[i].description + "</div> </div> </div>";
+        newProjDiv.outerHTML = "<div class='list__container'><input id='toggle" + i +"' type='checkbox' unchecked>  <label for='toggle" + i +"'>  <div class='list__container-image'> <div class='list__container-header'> <div class='list__container-header-rotate'> <h2 class='heading-secondary'>" + p[i].label + "</h2> </div> </div> <img src='" + p[i].screenshot + "' alt='" + p[i].alt + "'> </div> </label> <div id='expand'> <div class='list__container-text' id='proj-text-" + i + "'> <h3 class='heading-tertiary'>" + p[i].title + "</h3>" + p[i].description + "</div> </div> </div>";
         // If object has link, add it
         if (p[i].link) {
           var featLink = document.createElement("a");
@@ -169,7 +169,6 @@ var UIController = (function() {
 
         featuredTextDiv.appendChild(featuredTitle);
         featuredTextDiv.appendChild(featuredDescrip);
-        document.getElementById("hero").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
         // Remove previously featured
         // Add first, then remove to avoid iOS scrolling bug
@@ -184,7 +183,6 @@ var UIController = (function() {
         featuredImageDiv.appendChild(featuredLink);
         featuredTextDiv.appendChild(featuredTitle);
         featuredTextDiv.appendChild(featuredDescrip);
-        document.getElementById("hero").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
       }
     },
 
@@ -318,8 +316,6 @@ var controller = (function(dataCtrl, UICtrl){
           // Less than 600px, listener to scroll current project into view
           divList[i].addEventListener('click', function(el) {
             var projContainer = el.target.parentNode.parentNode.parentNode;
-            // console.log(projContainer);
-            projContainer.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
           });
         }
       }
@@ -345,9 +341,6 @@ var controller = (function(dataCtrl, UICtrl){
         // Remove listeners
           divList[i].removeEventListener('click', evTarget);
           divList[i].removeEventListener('focus', evTarget);
-          divList[i].removeEventListener('click', function(el) {
-            el.target.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-          });
         }
 
         setupEventListeners();
