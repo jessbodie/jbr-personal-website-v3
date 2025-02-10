@@ -1,14 +1,18 @@
+@use "sass:map";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .purpose {
   padding-bottom: 0;
   position: relative;
   display: block;
   width: 100%;
   max-height: 50vh;
-  height: $sec-height-xs;
+  height: variables.$sec-height-xs;
   background-color: inherit;
 
-  @include respond (tab-land) {
-    height: $sec-height-sm;
+  @include mixins.respond (tab-land) {
+    height: variables.$sec-height-sm;
   }
 
 
@@ -18,7 +22,7 @@
     position: relative;
     line-height: 0;
     float: left;
-    @include overlay ($color-white);
+    @include mixins.overlay (variables.$color-white);
     // display: none; // DEBUG
     display: block;
     overflow: hidden;
@@ -34,14 +38,14 @@
       margin-left: -15rem;
       }
 
-    @include respond(tab-port) {
+    @include mixins.respond(tab-port) {
       @supports ((clip-path: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))
                 and (shape-outside: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))) {
         margin-left: -10rem;
         }
       }
 
-    @include respond(tab-land) {
+    @include mixins.respond(tab-land) {
 
       // Needed to show when Clip Path and Shape Outside supported
       @supports ((clip-path: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))
@@ -54,19 +58,19 @@
 
   &__text {
     padding: 1rem 2rem 2rem 2rem;
-    z-index: map-get($zindex, screens);
-    color: $color-black;
+    z-index: map.get(variables.$zindex, screens);
+    color: variables.$color-black;
     display: block;
     margin-bottom: 0;
     position: absolute;
     bottom: 0; // NEW
-    margin-left: $left-margin; // NEW
+    margin-left: variables.$left-margin; // NEW
     background: linear-gradient(
          -60deg,
-         rgba($color-secondary, .7) 0%,
-         rgba($color-white, .6) 15%,
-         rgba($color-white, .7) 55%,
-         rgba($color-secondary, .8) 100%);
+         rgba(variables.$color-secondary, .7) 0%,
+         rgba(variables.$color-white, .6) 15%,
+         rgba(variables.$color-white, .7) 55%,
+         rgba(variables.$color-secondary, .8) 100%);
 
     // Show rectangle overlay when Clip Path and Shape Outside supported
     @supports ((clip-path: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))
@@ -81,7 +85,7 @@
       font-size: 1.4em;
       line-height: 155%;
 
-      @include respond(tab-port) {
+      @include mixins.respond(tab-port) {
         font-size: 1.4em;
         line-height: 160%;
         margin-left: 1em;

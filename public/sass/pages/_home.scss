@@ -1,14 +1,18 @@
+@use "sass:map";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .section-hero {
-  @include section-block;
+  @include mixins.section-block;
   height: 32rem;
   max-height: 80vmin;
-  background-color: $color-primary;
-  @include dropshadow;
+  background-color: variables.$color-primary;
+  @include mixins.dropshadow;
 
   background-image: linear-gradient(
        to right bottom,
-       rgba($color-primary, 0.2),
-       rgba($color-primary-dark, .7)),
+       rgba(variables.$color-primary, 0.2),
+       rgba(variables.$color-primary-dark, .7)),
        url('img/79th_field.jpg');
 
   background-size: cover;
@@ -16,7 +20,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   max-width: 100%;
-  z-index: map-get($zindex, text-over);
+  z-index: map.get(variables.$zindex, text-over);
 
   // @include respond(tab-port) {
   //   height: 42rem;
@@ -25,25 +29,25 @@
 
 
 .section-haiku {
-  @include section-block;
+  @include mixins.section-block;
   max-height: 80vh;
-  background-color: $color-white-true;
-  color: $color-black;
+  background-color: variables.$color-white-true;
+  color: variables.$color-black;
   padding-top: 2rem;
   padding-bottom: 4rem;
 }
 
 .section-purpose {
-  @include section-block;
+  @include mixins.section-block;
   // Show background image when Clip Path and Shape Outside not supported
   @supports not ((clip-path: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))
             and (shape-outside: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))) {
     background: linear-gradient(
          -60deg,
-         rgba($color-secondary, .6) 0%,
-         rgba($color-secondary, .0) 15%,
-         rgba($color-secondary, .0) 55%,
-         rgba($color-secondary, .7) 100%),
+         rgba(variables.$color-secondary, .6) 0%,
+         rgba(variables.$color-secondary, .0) 15%,
+         rgba(variables.$color-secondary, .0) 55%,
+         rgba(variables.$color-secondary, .7) 100%),
          url('../img/tree-dark_tree-light.jpg');
     background-size: cover;
     background-position: top left;
@@ -53,20 +57,20 @@
 
     background: linear-gradient(
          -60deg,
-         rgba($color-secondary, .6) 0%,
-         rgba($color-secondary, .0) 15%,
-         rgba($color-secondary, .0) 55%,
-         rgba($color-secondary, .7) 100%);
+         rgba(variables.$color-secondary, .6) 0%,
+         rgba(variables.$color-secondary, .0) 15%,
+         rgba(variables.$color-secondary, .0) 55%,
+         rgba(variables.$color-secondary, .7) 100%);
 
-  @include dropshadow;
-  @include clearfix;
+  @include mixins.dropshadow;
+  @include mixins.clearfix;
 }
 
 .section-latest {
-  @include section-block;
+  @include mixins.section-block;
   max-height: 100%;
-  background-color: rgba($color-primary, .4);
-  @include dropshadow;
+  background-color: rgba(variables.$color-primary, .4);
+  @include mixins.dropshadow;
   padding-top: 2rem;
   padding-bottom: 4rem;
 }

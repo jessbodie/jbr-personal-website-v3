@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .captions {
 
   &__container {
@@ -16,7 +19,7 @@
 
     font-family: inherit;
     font-size: 1rem;
-    color: $color-black;
+    color: variables.$color-black;
     background: transparent;
     padding: .5rem;
     overflow-y: auto;
@@ -30,9 +33,9 @@
 
     &:hover,
     &:focus {
-      border: 1px solid rgba($color-secondary, .25);
-      background: $color-white;
-      @include dropshadow;
+      border: 1px solid rgba(variables.$color-secondary, .25);
+      background: variables.$color-white;
+      @include mixins.dropshadow;
     }
 
     &-narrow {

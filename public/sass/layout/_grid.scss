@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .cont {
   width: 100%;
   // height: 100%;
@@ -14,13 +17,13 @@
 
 
 .row {
-  max-width: $grid-width;
+  max-width: variables.$grid-width;
   width: 100%;
   display: block;
   position: relative;
   height: 100%;
 
-  @include respond(big-desktop) {
+  @include mixins.respond(big-desktop) {
       width: 80%;
       margin: 0 auto;
   }
@@ -30,9 +33,9 @@
   display: inline-block;
 
 
-  @include respond(tab-port) {
+  @include mixins.respond(tab-port) {
     &:not(:last-child) {
-      margin-right: $gutter-sm;
+      margin-right: variables.$gutter-sm;
     }
   }
 

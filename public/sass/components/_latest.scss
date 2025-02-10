@@ -1,28 +1,33 @@
+@use "sass:map";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@use "../base/animations";
+
 
 
 .latest {
-  width: calc(100% - #{$gutter-sm} - #{$gutter-sm});
+  width: calc(100% - #{variables.$gutter-sm} - #{variables.$gutter-sm});
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
   flex-direction: column;
   justify-content: space-between;
   
-  margin-left: $gutter-sm;
-  margin-right: $gutter-sm;
+  margin-left: variables.$gutter-sm;
+  margin-right: variables.$gutter-sm;
   padding: 0;
 
   // Responsive edits
-  @include respond(tab-port) {
-    margin-left: $left-margin;
-    margin-right: $left-margin;
-    width: calc(100% - #{$left-margin} - #{$left-margin});
+  @include mixins.respond(tab-port) {
+    margin-left: variables.$left-margin;
+    margin-right: variables.$left-margin;
+    width: calc(100% - #{variables.$left-margin} - #{variables.$left-margin});
     flex-direction: row;
   }
 
-  @include respond(desktop) {
-    margin-right: calc(#{$left-margin} + #{$margin-scroll});
-    margin-top: $nav-top-margin;
+  @include mixins.respond(desktop) {
+    margin-right: calc(#{variables.$left-margin} + #{variables.$margin-scroll});
+    margin-top: variables.$nav-top-margin;
   }
 
 
@@ -33,16 +38,16 @@
     position: relative;
 
     opacity: 0;
-    @include animation__moveDown(-6rem);
-    animation-name: moveDown;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in;
-    animation-delay: 2.5s;
-    animation-fill-mode: forwards;
+    @include animations.animation__moveDown(-6rem);
+    // animation-name: moveDown;
+    // animation-duration: 500ms;
+    // animation-timing-function: ease-in;
+    // animation-delay: 2.5s;
+    // animation-fill-mode: forwards;
 
-    z-index: map-get($zindex, text-over);
+    z-index: map.get(variables.$zindex, text-over);
 
-    @include respond(tab-port) {
+    @include mixins.respond(tab-port) {
       flex: 0 1 4rem;
       margin-top: 14rem;
       width: 4rem;
@@ -60,11 +65,11 @@
       display: block;
       position: relative;
       top: 14rem;
-      z-index: map-get($zindex, text-over);
-      @include dropshadow-vertical;
-      background-color: $color-primary;
+      z-index: map.get(variables.$zindex, text-over);
+      @include mixins.dropshadow-vertical;
+      background-color: variables.$color-primary;
 
-      @include respond(tab-port) {
+      @include mixins.respond(tab-port) {
         top: 0;
 
       }
@@ -73,8 +78,8 @@
 
 
   &__text {
-    color: $color-black;
-    font-size: $body-default;
+    color: variables.$color-black;
+    font-size: variables.$body-default;
     margin-top: .4rem;
     margin-bottom: 2rem;
   }
@@ -92,7 +97,7 @@
   // IE 11 Problem where white space is appearing when latest__image for latest__first
   &__image {
     max-width: 100%;
-    @include dropshadow;
+    @include mixins.dropshadow;
     display: inline-block;
     vertical-align: top;
     line-height: 0;
@@ -102,7 +107,7 @@
     margin-top: 0;
     margin-bottom: .8rem;
 
-    @include overlay($color-tertiary);
+    @include mixins.overlay(variables.$color-tertiary);
 
     img {
       width: 100%; // DEBUG
@@ -127,7 +132,7 @@
     flex: 1 1 40vw; 
     margin-bottom: 4rem;
 
-    @include respond(tab-port) {
+    @include mixins.respond(tab-port) {
       max-width: 50vw; 
       order: 3;
     }
@@ -139,10 +144,10 @@
   &__second {
     flex: 2 1 30vw;
 
-    @include respond(tab-port) {
+    @include mixins.respond(tab-port) {
       max-width: 35vw;
-      margin-right: $gutter-sm;
-      margin-left: $gutter-sm;
+      margin-right: variables.$gutter-sm;
+      margin-left: variables.$gutter-sm;
       order: 2;
     }
   }

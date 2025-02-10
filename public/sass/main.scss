@@ -1,27 +1,27 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@use "abstracts/variables";
+@use "abstracts/mixins";
 
 
-@import "base/base";
-@import "base/utilities";
-@import "base/animations";
+@use "base/base";
+@use "base/utilities";
+@use "base/animations";
 
 
-@import "components/hero";
-@import "components/haiku";
-@import "components/purpose";
-@import "components/latest";
-@import "components/captions";
-@import "components/obligatory";
-@import "components/DnD";
-@import "components/list";
-@import "components/featured";
+@use "components/hero";
+@use "components/haiku";
+@use "components/purpose";
+@use "components/latest";
+@use "components/captions";
+@use "components/obligatory";
+@use "components/DnD";
+@use "components/list";
+@use "components/featured";
 
-@import "pages/home";
-@import "pages/about";
-@import "pages/projects";
+@use "pages/home";
+@use "pages/about";
+@use "pages/projects";
 
 
-@import "layout/header";
-@import "layout/grid";
-@import "layout/footer";
+@use "layout/header";
+@use "layout/grid";
+@use "layout/footer";

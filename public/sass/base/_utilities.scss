@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .u-margin-bottom-med {
   margin-bottom: 5rem;
 
@@ -6,7 +9,7 @@
 .u-margin-top-med {
   margin-top: 3rem;
 
-  @include respond (tab-port) {
+  @include mixins.respond (tab-port) {
     margin-top: 4rem;
   }
 
@@ -19,7 +22,7 @@
 .u-margin-header-wrap {
   margin-left: 6rem;
 
-  @include respond(tab-port) {
+  @include mixins.respond(tab-port) {
     margin-left: 0;
   }
 }
@@ -38,7 +41,7 @@
 
 .u-visible {
   opacity: 1;
-  padding: $left-margin;
+  padding: variables.$left-margin;
   transition: all 500ms;
   height: auto;
   max-height: 60rem;

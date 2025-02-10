@@ -1,18 +1,22 @@
+@use "sass:map";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .section-hero-text-only {
-  @include section-block;
-  background-color: $color-primary;
-  @include dropshadow;
+  @include mixins.section-block;
+  background-color: variables.$color-primary;
+  @include mixins.dropshadow;
   background-image: linear-gradient(
        to right bottom,
-       rgba($color-primary, 0.8),
-       rgba($color-primary-dark, .95));
+       rgba(variables.$color-primary, 0.8),
+       rgba(variables.$color-primary-dark, .95));
   max-width: 100%;
-  z-index: map-get($zindex, text-over);
+  z-index: map.get(variables.$zindex, text-over);
   height: 14rem;
   max-height: 20vmin;
   min-height: 10rem;
 
-  @include respond(tab-port) {
+  @include mixins.respond(tab-port) {
     max-height: 25vmin;
   }
 }
@@ -21,12 +25,12 @@
 .section-featured {
   display: none;
 
-  @include respond(tab-port) {
+  @include mixins.respond(tab-port) {
 
-    @include section-block;
+    @include mixins.section-block;
     // height: 0;
-    background-color: $color-white-true;
-    color: $color-black;
+    background-color: variables.$color-white-true;
+    color: variables.$color-black;
     max-width: 100%;
     padding: 0;
     margin: 0;
@@ -35,9 +39,9 @@
 }
 
 .section-projects {
-  @include section-block;
-  background-color: rgba($color-primary, .3);
-  color: $color-black;
+  @include mixins.section-block;
+  background-color: rgba(variables.$color-primary, .3);
+  color: variables.$color-black;
   padding-top: 2rem;
   padding-bottom: 4rem;
 

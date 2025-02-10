@@ -1,19 +1,22 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .obligatory {
   display: block;
-  margin-left: $left-margin;
-  margin-right: $left-margin;
+  margin-left: variables.$left-margin;
+  margin-right: variables.$left-margin;
 
   & .captions {
     display: none;
 
-    @include respond (tab-land) {
+    @include mixins.respond (tab-land) {
       display: block;
     }
   }
 
 
-  @include respond (tab-land) {
-    @include basic-flex;
+  @include mixins.respond (tab-land) {
+    @include mixins.basic-flex;
   }
 
   &__listing {
@@ -31,20 +34,20 @@
     height: 100%;
     max-width: 8rem;
     float: left;
-    margin-right: $left-margin;
+    margin-right: variables.$left-margin;
 
 
-    @include respond (tab-land) {
+    @include mixins.respond (tab-land) {
       margin-right: 0;
       max-width: 20rem;
       }
 
     &-only {
-      @include dropshadow;
+      @include mixins.dropshadow;
       width: 100%;
       margin-bottom: 2rem;
 
-      @include respond (tab-land) {
+      @include mixins.respond (tab-land) {
         margin-bottom: 0;
         }
   
@@ -66,7 +69,7 @@
     }
 
     figcaption {
-      @include respond (tab-land) {
+      @include mixins.respond (tab-land) {
         max-width: 20rem;
         padding: 0;
       }
@@ -82,7 +85,7 @@
     }
 
     button {
-      @include respond (tab-land) {
+      @include mixins.respond (tab-land) {
         font-size: 1rem;
         padding: .3rem;
         position: relative;
@@ -96,8 +99,8 @@
 
   &__text {
 
-    @include respond (tab-land) {
-      @include flex-item-right;
+    @include mixins.respond (tab-land) {
+      @include mixins.flex-item-right;
     }
 
     &-wrapper {
@@ -107,8 +110,8 @@
         @for $i from 1 through 4 {
           &:nth-child(#{$i}) {
       //       animation-delay:(#{($i * 1s)});
-            @include respond (tab-land) {
-              margin-left: (#{($i * $left-margin) - $left-margin});
+            @include mixins.respond (tab-land) {
+              margin-left: (#{($i * variables.$left-margin) - variables.$left-margin});
 
             }
           }
@@ -121,14 +124,14 @@
             }
 
     &-date {
-      color: $color-primary;
+      color: variables.$color-primary;
     }
 
     &-single {
       // border: 1px solid gray;
 
-      color: $color-primary-dark;
-      font-size: $body-default;
+      color: variables.$color-primary-dark;
+      font-size: variables.$body-default;
       line-height: normal;
       word-spacing: .35rem;
       margin-bottom: 2.5rem;
@@ -138,19 +141,19 @@
 
 
 
-      @include respond (mobile) {
+      @include mixins.respond (mobile) {
           &:nth-child(4) {
-            @include clearfix;
+            @include mixins.clearfix;
             }
         }
 
-      @include respond (tab-port) {
+      @include mixins.respond (tab-port) {
           &:nth-child(6) {
-            @include clearfix;
+            @include mixins.clearfix;
             }
         }
 
-      @include respond (tab-land) {
+      @include mixins.respond (tab-land) {
         align-items: space-between;
 
       }
@@ -163,8 +166,8 @@
     }
 
     &-multi {
-      color: $color-primary-dark;
-      font-size: $body-default;
+      color: variables.$color-primary-dark;
+      font-size: variables.$body-default;
       line-height: 160%;
       word-spacing: .35rem;
       margin-bottom: 2.5rem;

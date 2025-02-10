@@ -1,9 +1,12 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 
 .DnD {
   // border: 1px solid red;
   height: 90vh;
   margin-top: 3rem;
-  margin-left: $left-margin;
+  margin-left: variables.$left-margin;
   margin-right: 0;
   display: flex;
   flex-direction: row;
@@ -22,13 +25,13 @@
       margin-top: 0;
       margin-left: 0;
       margin-right: 5vw;
-      @include respond(tab-land) {
+      @include mixins.respond(tab-land) {
         margin-right: 10vw;
       }
-      @include respond(desktop) {
+      @include mixins.respond(desktop) {
         margin-left: 6rem;
       }
-      @include respond(big-desktop) {
+      @include mixins.respond(big-desktop) {
         margin-right: 5vw;
       }
 
@@ -45,7 +48,7 @@
         width: 30vw;
         max-width: 40rem;
         overflow-x: hidden;
-        @include dropshadow;
+        @include mixins.dropshadow;
       }
     }
   }
@@ -71,12 +74,12 @@
       padding-right: 1rem;
       width: 22vh;
       height: 14vh;
-      @include respond(tab-land) {
+      @include mixins.respond(tab-land) {
         max-width: 11rem;
         max-height: 6.5rem;
         }
 
-      @include respond(big-desktop) {
+      @include mixins.respond(big-desktop) {
         width: 8vw;
         height: 6vw;
         }
@@ -84,12 +87,12 @@
         
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
-          @include respond (tab-port) {
+          @include mixins.respond (tab-port) {
             margin-left: (#{($i * 5vw) - 5vw});
             // margin-left: (#{($i * 2rem) - 3rem});
           }
 
-          @include respond (tab-land) {
+          @include mixins.respond (tab-land) {
             margin-left: (#{($i * 5vw) - 5vw});
             // margin-left: (#{($i * $left-margin) - $left-margin});
           }
@@ -98,8 +101,8 @@
 
       figcaption {
         // border: 1px solid black;
-        color: $color-white;
-        background-color: $color-primary-dark;
+        color: variables.$color-white;
+        background-color: variables.$color-primary-dark;
         padding: .3rem .5rem;
         opacity: .7;
         position: relative;
@@ -110,40 +113,35 @@
         text-overflow: ellipsis;
         width: inherit;
         max-width: inherit;
-        @include respond(tab-land) {
-          max-width: inherit;
-          max-height: inherit;
-          }
+        @include mixins.respond(tab-land);
   
         display: block;
         line-height: 1;
-        @include dropshadow;
+        @include mixins.dropshadow;
 
     
         font-size: 1rem;
         font-weight: bold;
-        @include respond (desktop) {
-          font-size: $body-default;
-        }
+        @include mixins.respond (desktop);
         }
       }
 
     &-dropHere {
       // border: 1px solid red;
-      background-color: rgba($color-secondary, .4);
+      background-color: rgba(variables.$color-secondary, .4);
       overflow-y: hidden;
       border-radius: 1px;
-      @include dropshadow;
+      @include mixins.dropshadow;
       width: inherit;
       height: inherit;
-      @include respond(tab-land) {
+      @include mixins.respond(tab-land) {
         max-width: inherit;
         max-height: inherit;
         }
     }
 
     &-active {
-      background-color: $color-primary;
+      background-color: variables.$color-primary;
       transition: background-color 500ms;
       }
 

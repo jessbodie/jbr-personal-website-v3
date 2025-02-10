@@ -1,6 +1,10 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@use "../base/animations";
+
 .haiku {
 
-  @include basic-flex;
+  @include mixins.basic-flex;
 
 
   &__header {
@@ -11,12 +15,12 @@
     position: relative;
 
     opacity: 0;
-    @include animation__moveDown(-6rem);
-    animation-name: moveDown;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
+    @include animations.animation__moveDown(-6rem);
+    // animation-name: moveDown;
+    // animation-duration: 500ms;
+    // animation-timing-function: ease-in;
+    // animation-delay: 1.5s;
+    // animation-fill-mode: forwards;
 
     &-rotate {
       width: 4rem;
@@ -26,14 +30,14 @@
       transform: rotate(-90deg);
       transform-origin: left top;
 
-      @include respond(tab-port) {
+      @include mixins.respond(tab-port) {
 
       }
     }
 
     &-top {
-      top: $h2-top-haiku;
-      @include dropshadow-vertical;
+      top: variables.$h2-top-haiku;
+      @include mixins.dropshadow-vertical;
 
       // opacity: 0;
       // animation-name: fadeIn;
@@ -49,12 +53,12 @@
 
   &__text {
 
-    @include flex-item-right;
+    @include mixins.flex-item-right;
     margin-top: -0.2em;
 
     &-single {
       align-items: space-between;
-      color: $color-primary-dark;
+      color: variables.$color-primary-dark;
       font-size: 1.2em;
       font-weight: 400;
       word-spacing: 1.05rem;
@@ -64,26 +68,25 @@
       top: 0;
       vertical-align: top;
 
-      // Replaced with AOS Library
-      // @include animation-fadeIn;s
+      @include animations.animation-fadeIn;
       
       @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
-            animation-delay:(#{1s + ($i * 2s)});
+            animation-delay:(#{1s + ($i * .75s)});
           }
         }
 
 
-      @include respond(tab-port) {
+      @include mixins.respond(tab-port) {
 
         @for $i from 1 through 3 {
           &:nth-child(#{$i}) {
-              margin-left: (#{($i * $left-margin)});
+              margin-left: (#{($i * variables.$left-margin)});
             }
           }
         }
 
-        @include respond(tab-land) {
+        @include mixins.respond(tab-land) {
           font-size: 1.4em;
           // margin-bottom: 2rem;
         }

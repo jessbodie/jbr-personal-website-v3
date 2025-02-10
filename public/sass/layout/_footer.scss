@@ -1,17 +1,20 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .footer {
-  @include section-block;
+  @include mixins.section-block;
   height: 27rem;
   // max-height: 60vh;
 
 
-  color: $color-white;
+  color: variables.$color-white;
   // background-color: $color-primary-dark;
 
 
   background-image: linear-gradient(
        to right bottom,
-       rgba($color-primary-dark, .95),
-       rgba($color-primary-dark, 1));
+       rgba(variables.$color-primary-dark, .95),
+       rgba(variables.$color-primary-dark, 1));
 
   max-width: 100%;
 
@@ -60,13 +63,13 @@
       &:hover,
       &:focus {
         transform: translateY(-2px);
-        text-shadow: .25rem .25rem .5rem rgba($color-blacker, .8);
+        text-shadow: .25rem .25rem .5rem rgba(variables.$color-blacker, .8);
       }
 
 
       &:active {
         transform: translateY(1px);
-        text-shadow: .25rem .25rem .25rem rgba($color-blacker, .6);
+        text-shadow: .25rem .25rem .25rem rgba(variables.$color-blacker, .6);
       }
 
 
@@ -79,11 +82,11 @@
 
         &:hover,
         &:focus {
-          filter: drop-shadow(.25rem .25rem .5rem rgba($color-blacker, .8));
+          filter: drop-shadow(.25rem .25rem .5rem rgba(variables.$color-blacker, .8));
         }
 
         &:active {
-          filter: drop-shadow(.25rem .25rem .25rem rgba($color-blacker, .6));
+          filter: drop-shadow(.25rem .25rem .25rem rgba(variables.$color-blacker, .6));
         }
       }
 
@@ -95,7 +98,7 @@
         &:link,
         &:visited {
           text-decoration: none;
-          color: $color-white;
+          color: variables.$color-white;
         }
       }
     }
@@ -103,9 +106,9 @@
 
   &__copyright {
     font-size: 1rem;
-    color: $color-white;
+    color: variables.$color-white;
     text-align: center;
-    padding-top: $left-margin;
+    padding-top: variables.$left-margin;
     padding-bottom: 6rem;
     opacity: .6;
   }
