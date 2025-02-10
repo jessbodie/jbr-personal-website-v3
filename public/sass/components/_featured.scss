@@ -113,9 +113,9 @@
     &:focus {
       background-color: variables.$color-secondary-light;
       border-radius: 1px;
-      @include mixins.dropshadow;
       transform: translateY(-5px);
       transition: transform 300ms, background-color 300ms;
+      @include mixins.dropshadow;
 
       & > div {
         background-color: variables.$color-white;

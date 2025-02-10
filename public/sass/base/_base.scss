@@ -135,8 +135,8 @@ button {
   &:hover,
   &:focus,
   &:active {
-    @include mixins.dropshadow;
     cursor: pointer;
+    @include mixins.dropshadow;
   }
 }
 

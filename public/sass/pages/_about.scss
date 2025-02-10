@@ -3,12 +3,9 @@
 @use "../abstracts/variables";
 
   .section-hero-about {
-    @include mixins.section-block;
     height: 30rem;
     max-height: 75vh;
     background-color: variables.$color-primary;
-    @include mixins.dropshadow;
-
 
     background-image: linear-gradient(
          to right bottom,
@@ -22,30 +19,32 @@
     max-width: 100%;
     z-index: map.get(variables.$zindex, text-over);
 
+    @include mixins.section-block;
+    @include mixins.dropshadow;
     @include mixins.respond(tab-port) {
       height: 34rem;
     }
   }
 
 .section-obligatory {
-  @include mixins.section-block;
   background-color: variables.$color-white-true;
   color: variables.$color-black;
   padding-top: 2rem;
   padding-bottom: variables.$left-margin;
+  @include mixins.section-block;
   @include mixins.dropshadow;
 }
 
 .section-DnD {
   border: 1px solid black;
-  @include mixins.section-block;
   background-color: rgba(variables.$color-primary, .2);
   color: variables.$color-black;
   padding-top: 2rem;
   padding-bottom: variables.$left-margin;
-  @include mixins.dropshadow;
 
   @media only screen and (max-width: 56.25em) and (hover:none) {
     display: none;
   }
+  @include mixins.section-block;
+  @include mixins.dropshadow;
 }

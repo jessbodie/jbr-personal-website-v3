@@ -91,15 +91,14 @@
       img {
         cursor: pointer;
         position: relative;
+        height: variables.$proj-header-mobile;
+        overflow: hidden;
         // IE 11 doesn't support object-fit
         @supports (object-fit: cover) {
           object-fit: cover;
           object-position: 0% 0%;
           width: 100%;
         }
-        height: variables.$proj-header-mobile;
-        overflow: hidden;
-
         &:hover,
         &:focus {
           opacity: .7;
@@ -117,15 +116,15 @@
         margin-top: 0;
         margin-bottom: 0;
         height: variables.$proj-header-tab;
-        @include mixins.respond(big-desktop) {
-          max-height: calc(#{variables.$desktop-width} / 4);
-        }
         width: 50%;
         overflow: hidden;
 
         img {
           height: 35vw;
           max-width: 300%;
+        }
+        @include mixins.respond(big-desktop) {
+          max-height: calc(#{variables.$desktop-width} / 4);
         }
       }
 

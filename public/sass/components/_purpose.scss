@@ -22,7 +22,6 @@
     position: relative;
     line-height: 0;
     float: left;
-    @include mixins.overlay (variables.$color-white);
     // display: none; // DEBUG
     display: block;
     overflow: hidden;
@@ -38,7 +37,8 @@
       margin-left: -15rem;
       }
 
-    @include mixins.respond(tab-port) {
+      @include mixins.overlay (variables.$color-white);
+      @include mixins.respond(tab-port) {
       @supports ((clip-path: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))
                 and (shape-outside: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))) {
         margin-left: -10rem;

@@ -3,7 +3,9 @@
 
 // Basic horizontal drop shdow
 @mixin dropshadow {
-  box-shadow: .2rem .5rem .5rem rgba(variables.$color-primary, .6);
+  & {
+    box-shadow: .2rem .5rem .5rem rgba(variables.$color-primary, .6);
+  }
 }
 
 // Drop shdow for rotated elements , like 2nd headers
@@ -14,9 +16,11 @@
 
 // Basics for each main section block
 @mixin section-block {
-  display: block;
-  position: relative;
-  width: 100%;
+  &{
+    display: block;
+    position: relative;
+    width: 100%;  
+  }
 }
 
 

@@ -3,11 +3,9 @@
 @use "../abstracts/variables";
 
 .section-hero {
-  @include mixins.section-block;
   height: 32rem;
   max-height: 80vmin;
   background-color: variables.$color-primary;
-  @include mixins.dropshadow;
 
   background-image: linear-gradient(
        to right bottom,
@@ -22,6 +20,8 @@
   max-width: 100%;
   z-index: map.get(variables.$zindex, text-over);
 
+  @include mixins.section-block;
+  @include mixins.dropshadow;
   // @include respond(tab-port) {
   //   height: 42rem;
   // }
@@ -29,16 +29,23 @@
 
 
 .section-haiku {
-  @include mixins.section-block;
   max-height: 80vh;
   background-color: variables.$color-white-true;
   color: variables.$color-black;
   padding-top: 2rem;
   padding-bottom: 4rem;
+  @include mixins.section-block;
 }
 
 .section-purpose {
-  @include mixins.section-block;
+
+  background: linear-gradient(
+    -60deg,
+    rgba(variables.$color-secondary, .6) 0%,
+    rgba(variables.$color-secondary, .0) 15%,
+    rgba(variables.$color-secondary, .0) 55%,
+    rgba(variables.$color-secondary, .7) 100%);
+
   // Show background image when Clip Path and Shape Outside not supported
   @supports not ((clip-path: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))
             and (shape-outside: polygon(55% 0, 66% 50%, 55% 100%, 0% 100%, 0 0))) {
@@ -55,22 +62,17 @@
     max-width: 100%;
     }
 
-    background: linear-gradient(
-         -60deg,
-         rgba(variables.$color-secondary, .6) 0%,
-         rgba(variables.$color-secondary, .0) 15%,
-         rgba(variables.$color-secondary, .0) 55%,
-         rgba(variables.$color-secondary, .7) 100%);
 
+  @include mixins.section-block;
   @include mixins.dropshadow;
   @include mixins.clearfix;
 }
 
 .section-latest {
-  @include mixins.section-block;
   max-height: 100%;
   background-color: rgba(variables.$color-primary, .4);
-  @include mixins.dropshadow;
   padding-top: 2rem;
   padding-bottom: 4rem;
+  @include mixins.section-block;
+  @include mixins.dropshadow;
 }

@@ -3,9 +3,7 @@
 @use "../abstracts/variables";
 
 .section-hero-text-only {
-  @include mixins.section-block;
   background-color: variables.$color-primary;
-  @include mixins.dropshadow;
   background-image: linear-gradient(
        to right bottom,
        rgba(variables.$color-primary, 0.8),
@@ -16,6 +14,8 @@
   max-height: 20vmin;
   min-height: 10rem;
 
+  @include mixins.section-block;
+  @include mixins.dropshadow;
   @include mixins.respond(tab-port) {
     max-height: 25vmin;
   }
@@ -27,23 +27,23 @@
 
   @include mixins.respond(tab-port) {
 
-    @include mixins.section-block;
     // height: 0;
     background-color: variables.$color-white-true;
     color: variables.$color-black;
     max-width: 100%;
     padding: 0;
     margin: 0;
+    @include mixins.section-block;
   }
 
 }
 
 .section-projects {
-  @include mixins.section-block;
   background-color: rgba(variables.$color-primary, .3);
   color: variables.$color-black;
   padding-top: 2rem;
   padding-bottom: 4rem;
 
   max-width: 100%;
+  @include mixins.section-block;
 }

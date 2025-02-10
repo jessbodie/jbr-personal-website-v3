@@ -37,6 +37,7 @@
     height: 0;
     position: relative;
 
+    z-index: map.get(variables.$zindex, text-over);
     opacity: 0;
     @include animations.animation__moveDown(-6rem);
     // animation-name: moveDown;
@@ -44,8 +45,6 @@
     // animation-timing-function: ease-in;
     // animation-delay: 2.5s;
     // animation-fill-mode: forwards;
-
-    z-index: map.get(variables.$zindex, text-over);
 
     @include mixins.respond(tab-port) {
       flex: 0 1 4rem;
@@ -66,9 +65,8 @@
       position: relative;
       top: 14rem;
       z-index: map.get(variables.$zindex, text-over);
-      @include mixins.dropshadow-vertical;
       background-color: variables.$color-primary;
-
+      @include mixins.dropshadow-vertical;
       @include mixins.respond(tab-port) {
         top: 0;
 
@@ -97,7 +95,6 @@
   // IE 11 Problem where white space is appearing when latest__image for latest__first
   &__image {
     max-width: 100%;
-    @include mixins.dropshadow;
     display: inline-block;
     vertical-align: top;
     line-height: 0;
@@ -107,6 +104,7 @@
     margin-top: 0;
     margin-bottom: .8rem;
 
+    @include mixins.dropshadow;
     @include mixins.overlay(variables.$color-tertiary);
 
     img {

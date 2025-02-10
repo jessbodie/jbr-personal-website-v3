@@ -112,16 +112,13 @@
         overflow: hidden;
         text-overflow: ellipsis;
         width: inherit;
-        max-width: inherit;
-        @include mixins.respond(tab-land);
-  
+        max-width: inherit;  
         display: block;
         line-height: 1;
-        @include mixins.dropshadow;
-
-    
         font-size: 1rem;
         font-weight: bold;
+        @include mixins.respond(tab-land);
+        @include mixins.dropshadow;
         @include mixins.respond (desktop);
         }
       }
@@ -131,13 +128,10 @@
       background-color: rgba(variables.$color-secondary, .4);
       overflow-y: hidden;
       border-radius: 1px;
-      @include mixins.dropshadow;
       width: inherit;
       height: inherit;
-      @include mixins.respond(tab-land) {
-        max-width: inherit;
-        max-height: inherit;
-        }
+      @include mixins.dropshadow;
+      @include mixins.respond(tab-land);
     }
 
     &-active {

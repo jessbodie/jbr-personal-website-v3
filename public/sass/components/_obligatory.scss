@@ -43,10 +43,9 @@
       }
 
     &-only {
-      @include mixins.dropshadow;
       width: 100%;
       margin-bottom: 2rem;
-
+      @include mixins.dropshadow;
       @include mixins.respond (tab-land) {
         margin-bottom: 0;
         }

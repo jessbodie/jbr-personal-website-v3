@@ -2,7 +2,6 @@
 @use "../abstracts/variables";
 
 .footer {
-  @include mixins.section-block;
   height: 27rem;
   // max-height: 60vh;
 
@@ -20,6 +19,8 @@
 
   position: relative;
   overflow: hidden;
+
+  @include mixins.section-block;
 
   &__bg-image {
     background-image: url('../vendor/img/plastic_bag_outline_cc.svg');

@@ -140,24 +140,28 @@
 
 @mixin animation__moveDown ($y) {
 
-  animation-name: moveDown;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in;
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards;
-
-  @keyframes moveDown {
-         0% {
-              opacity: 0;
-              transform: translateY($y);
-         }
-
-         100% {
-              opacity: 1;
-              transform: translateY(0);
-         }
+  @keyframes moveDown  {
+    0% {
+        opacity: 0;
+        transform: translateY($y);
     }
-}
+  
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  & {
+    animation-name: moveDown;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;  
+  }
+  }
+
+    
+
 
 // TODO Make pretty
 @keyframes bag {
